@@ -1,85 +1,94 @@
-import React from 'react';
+import React,  { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../utils/mutations';
 
-
-
-//change directory once those files are made
-import Auth from '../utils/auth';
-
-
-
+import Auth from '../utils/auth'
 
 const Login = (props) => {
-    const [formState, setFormState] = useState({ email: '', password: '' });
-    const [login, { error }] = useMutation(LOGIN_USER);
-  
-    // update state based on form input changes
-    const handleChange = (event) => {
-      const { name, value } = event.target;
-  
-      setFormState({
-        ...formState,
-        [name]: value,
+
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error, data }] = useMutation(LOGIN_USER);
+
+  //update state based on form input changes
+
+  const handleChange = (event) => {
+
+    const { name, value } = event.target;
+
+    setFormState({ ...formState, [name]: value });
+  }
+
+  // submit form
+  const handleFormSubmit = async (event) => {
+    event.PreventDefault();
+    
+    try {
+      const { data } = await login ({
+        variables: { ...formState },
       });
-    };
 
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
-    
-        try {
-          const { data } = await login({
-            variables: { ...formState },
-          });
-    
-          Auth.login(data.login.token);
-        } catch (e) {
-          console.error(e);
-        }
-    
-        // clear form values
-        setFormState({
-          email: '',
-          password: '',
-        });
-      };
-    
-      return (
-        <main className="flex-row justify-center mb-4">
-          <div className="col-12 col-md-6">
-            <div className="card">
-              <h4 className="card-header">Login</h4>
-              <div className="card-body">
-                <form onSubmit={handleFormSubmit}>
-                  <input
-                    className="form-input"
-                    placeholder="Your email"
-                    name="email"
-                    type="email"
-                    id="email"
-                    value={formState.email}
-                    onChange={handleChange}
-                  />
-                  <input
-                    className="form-input"
-                    placeholder="******"
-                    name="password"
-                    type="password"
-                    id="password"
-                    value={formState.password}
-                    onChange={handleChange}
-                  />
-                  <button className="btn d-block w-100" type="submit">
-                    Submit
-                  </button>
-                </form>
-    
-                {error && <div>Login failed</div>}
-              </div>
-            </div>
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+  
+  // clear form values
+  setFormState({
+    email: '',
+    password: '',
+  })
+  }
+
+  
+  return (
+    <section className=''>
+      <div className=''>
+        <div className=''>
+          <h4 className=''>Login</h4>
+          <div className=''>
+            {data ? (
+              <p>
+                You are Logged in. {' '}
+                <Link to='/' >Head back to homepage.</Link>
+              </p>
+            ) : (
+              <form onSubmit={ handleFormSubmit }>
+                <input
+                  className=''
+                  placeholder='Email'
+                  name='email'
+                  type='email'
+                  vaule={formState.email}
+                  onChange={handleChange}
+                />
+                <input
+                  className=''
+                  placeholder='Password'
+                  name='password'
+                  type='password'
+                  vaule={formState.password}
+                  onChange={handleChange}
+                />
+                <button
+                className=''
+                style={{ cursor: 'pointer' }}
+                type='submit'
+                >
+                  Submit
+                </button>
+              </form>
+            )}
+            {error && (
+              <div className=''>
+                {error.message}
+                </div>
+            )}
           </div>
-        </main>
-      );
+        </div>
+      </div>
+    </section>
+  )
+}
 
-};
-
-
-export default Login;
+export default Login
