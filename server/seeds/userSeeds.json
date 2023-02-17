@@ -1,28 +1,28 @@
 [
     {
-        "name": "Brian Kernighan",
-        "email": "bkernighan@techfriends.dev",
-        "password": "password01"
+        "name": "Emily Anderson",
+        "email": "emily.anderson@email.com",
+        "password": "Emanderson2023"
     },
     {
-        "name": "Max Kanat-Alexander",
-        "email": "mkanatalexander@techfriends.dev",
-        "password": "password02"
+        "name": "John Wick",
+        "email": "john.wick@email.com",
+        "password": "Jwicked2023"
     },
     {
-        "name": "Why The Lucky Stiff",
-        "email": "wtls@techfriends.dev",
-        "password": "password03"
+        "name": "Samantha Lee",
+        "email": "samantha.lee@email.com",
+        "password": "SamLee2023"
       },
       {
-        "name": "Kent Beck",
-        "email": "kbeck@techfriends.dev",
-        "password": "password04"
+        "name": "David Chen",
+        "email": "david.chen@email.com",
+        "password": "Dchen2023"
       },
       {
-        "name": "Edward V. Berard",
-        "email": "evberard@techfriends.dev",
-        "password": "password05"
+        "name": "Jessica Williams",
+        "email": "jessica.williams@email.com",
+        "password": "Jwilliams2023"
       }
 
 ]
