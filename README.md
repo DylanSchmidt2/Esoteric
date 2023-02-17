@@ -1,8 +1,9 @@
-<h1 align="center">ESOTERIC 
+<h1 align="center"> ESOTERIC 
         
-![esoteric ss](https://user-images.githubusercontent.com/109780961/218917375-6b33a019-15f0-450c-b47f-e36652796bf0.PNG)
-### Description
-ESOTERIC is an open source, <ins>Tech Blog</ins> explicitly for bootcamp students and alumni to learn from eachother !
+        (Live Image)
+        
+###       
+This is the perfect enviorment for the new student to ask how to set up thier very first "Hello World", as well as a place for those esoteric debates to be had 🧠.
 
 ### Dependencies
          
