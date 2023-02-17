@@ -25,11 +25,11 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_POST= gql`
-  mutation addThought($thoughtText: String!) {
-    addThought(thoughtText: $thoughtText) {
+  mutation addPost($postText: String!) {
+    addPost(postText: $postText) {
       _id
-      thoughtText
-      thoughtAuthor
+      postText
+      postAuthor
       createdAt
       comments {
         _id
@@ -40,11 +40,11 @@ export const ADD_POST= gql`
 `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
+  mutation addComment($posttId: ID!, $commentText: String!) {
+    addComment(posttId: $postId, commentText: $commentText) {
       _id
-      thoughtText
-      thoughtAuthor
+      postText
+      postAuthor
       createdAt
       comments {
         _id
