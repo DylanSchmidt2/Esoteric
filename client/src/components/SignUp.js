@@ -1,7 +1,9 @@
-import React from 'react';
+import React from 'react'
 
+const SignUp = () => {
+  return (
+    <div>SignUp</div>
+  )
+}
 
-
-
-//change directory once those files are made
-import Auth from '../utils/auth';
+export default SignUp

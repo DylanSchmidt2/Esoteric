@@ -1,4 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-//change directory once those files are made
-import Auth from '../utils/auth';
+const Home = () => {
+  return (
+    <div>Home</div>
+  )
+}
+
+export default Home
