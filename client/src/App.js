@@ -7,14 +7,16 @@ import Login from './components/Login';
 import SignUp from './components/SignUp'
 
 
+
+
 function App() {
   return (
     <div>
 
-      <Home />
-      <Header />
+      {/* <Home /> */}
+      {/* <Header /> */}
       <Login />
-      <SignUp />
+      {/* <SignUp /> */}
       
 
     </div>
