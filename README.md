@@ -42,13 +42,12 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
                
 ### Contributors
                                                       
-https://github.com/BonditS
+[Bondit Sinlee](https://github.com/BonditS)
         
-https://github.com/HTML-No0b
+[Richard Martin](https://github.com/HTML-No0b)
         
-https://github.com/WilliamHirschh
+[William Hirsch](https://github.com/WilliamHirschh)
 
-https://github.com/DylanSchmidt2
-
+[Dylan Schmidt](https://github.com/DylanSchmidt2)
 
 ### Links
