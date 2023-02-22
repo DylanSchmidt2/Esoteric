@@ -1,3 +1,4 @@
+HomepageTailwind
 function App() {
   return (
     <html>
@@ -52,6 +53,22 @@ function App() {
      
   </body>
 </html>
+
+import './App.css';
+
+import SignupForm from './components/SignupForm';
+import LoginForm from './components/LoginForm';
+
+function App() {
+  return (
+    //<SignupForm/>
+    //<LoginForm/>
+    // Must require in div
+    <div className="App"> 
+      
+
+    </div>
+ main
   );
 }
 export default App;
