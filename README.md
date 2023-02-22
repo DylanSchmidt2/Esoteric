@@ -37,8 +37,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 <a href="https://www.npmjs.com/package/gravatar"><img src="https://img.shields.io/badge/Gravatar-v1.8.2-red" />    
         
 <a href="https://www.npmjs.com/package/bcrypt"><img src="https://img.shields.io/badge/BcryptJS-v2.4.3-red" />   
-        
-<a href="https://www.npmjs.com/package/nodemon"><img src="https://img.shields.io/badge/Nodemon-v2.0.20-red" /> 
                
 ### Contributors
                                                       
