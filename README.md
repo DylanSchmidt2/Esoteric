@@ -3,8 +3,8 @@
 ### Description
 ESOTERIC is a React built <ins>Tech Blog</ins> for bootcamp students and alumni to learn from eachother !
 
-### Usage & Available scripts (run in project directory)
-
+### Usage & Available scripts
+ ###### (run scripts in project directory)
 ### `npm start`
  
 Launches the test runner in the interactive watch mode.\
