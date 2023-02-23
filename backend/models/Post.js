@@ -3,11 +3,11 @@ const { model, Schema } = require('mongoose');
 const postSchema = new Schema({
  postText: {
     type: String,
-    required: true,
+    trim: true,
+ },required: true,
     minlength: 1,
     maxlength: 500,
-    trim: true,
- },
+    
  postAuthor: {
     type: String,
     required: true,
