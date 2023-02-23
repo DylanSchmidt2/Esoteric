@@ -5,17 +5,17 @@ const { signToken } = require('../utils/auth')
 const resolvers = {
     Query: {
         users: async () => {
-            return await User.findAll().populate('posts')
+            return await User.find().populate('posts')
         },
         user: async (parent,  { username }) => {
             return await User.findOne({ username }).populate('posts');
         },
         posts: async (parent, { username }) => {
             const params = username ? { username } : {};
-            return Thought.find(params).sort({ createdAt: -1 });
+            return Post.find(params).sort({ createdAt: -1 });
         },
         post: async (parent, { postId }) => { 
-            return await Thought.findOne({ _id: postId }).populate('user');
+            return await Post.findOne({ _id: postId }).populate('user');
         },
         me: async (parent, args, context) => {
             if (context.user) {
@@ -96,7 +96,7 @@ const resolvers = {
             }
             throw new AuthenticationError('No user found');
         },
-        removeComment: async (parent, { thoughtId, commentId }, context) => {
+        removeComment: async (parent, { postId, commentId }, context) => {
             if (context.user) {
                 return Post.findOneAndUpdate (
                     { _id: postId },
