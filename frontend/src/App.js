@@ -8,14 +8,14 @@ import {
 } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
 import {Routes, Route } from 'react-router-dom'
-import Header from  './components/Header/Header'
-import Home from './pages/Post'
+import Nav from  './components/Nav/Nav'
+import Landing from './pages/Landing'
+import Post from './pages/Post'
 import Login from  './pages/Login'
 import Register from './pages/Register'
-import Landing from './pages/Landing';
+import Blog from './pages/Blog'
 
 
-const fakeUser = true;
 
 // Construct main gql API endpoint
 const httpLink = createHttpLink({
@@ -44,18 +44,13 @@ const client = new ApolloClient({
 
 function App() {
   return (
-   <ApolloProvider client={client}>
+   <ApolloProvider client={ client }>
     
-      <Header 
-      props={ fakeUser }/>
+      <Nav />
         <Routes>
           <Route
             path="/"
             element ={<Landing />}
-          />
-          <Route
-          path="/Home"
-          element={<Home />}
           />
           <Route
             path="/login"
@@ -65,7 +60,12 @@ function App() {
             path="/register"
             element ={<Register />}
           />
+          <Route
+            path="/blog"
+            element ={<Blog />}
+          />
        </Routes>
+       <Post />
     
    </ApolloProvider>
   );

@@ -28,18 +28,6 @@ const Landing = () => {
       >
         <div className="flex space-x-12 space-y-2">
           <h1 className="font-Raleway text-5xl font-Large">ESOTERIC</h1>
-          <a
-            href=""
-            className="self-start  px-3 py-2 leading-none text-white-200 border border-white-800 rounded-lg focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-indigo-500 from-gray-900 to-black"
-          >
-            SignUp
-          </a>
-          <a
-            href=""
-            className="self-start ml-0 px-4 py-2 leading-none text-white-200 border border-white-800 rounded-lg focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-indigo-500 from-gray-900 to-black"
-          >
-            Login
-          </a>
         </div>
   
         <div className="h-32 md:h-40"></div>
@@ -47,7 +35,7 @@ const Landing = () => {
         <p
           className="font-sans text-3xl font-bold text-gray-200 max-w-3xl lg:text-6xl lg:pr-24 md:text-6xl"
         >
-          Connect with like minded individuals to share and exploare thoughts about coding
+          Connect with like minded individuals to share and explore thoughts about coding
         </p>
         
       
@@ -56,6 +44,8 @@ const Landing = () => {
     </body>
   
   </div>
+
+  
   )
 }
 
