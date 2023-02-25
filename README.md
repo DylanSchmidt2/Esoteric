@@ -49,3 +49,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 [Dylan Schmidt](https://github.com/DylanSchmidt2)
 
 ### Links
+https://young-hollows-95144.herokuapp.com/
+'The repo host didnt make the heroku application. So I tried ripping out the old repo to create a local heroku, but couldnt get anything published due to permisson access. It starts with 'npm start' https://dashboard.heroku.com/apps/young-hollows-95144/activity' Added my dashboard incase you wanted to see any errors that happened'
